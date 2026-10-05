@@ -3,142 +3,315 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nogueira Prado Advogados | Atendimento jurídico</title>
-<meta name="description" content="Escritório de advocacia em direito de família, trabalhista, consumidor, previdenciário e empresarial. Agende uma conversa inicial.">
+<title>Almeida Duarte Advogados | Escritório de advocacia</title>
+<meta name="description" content="Almeida Duarte Advogados: escritório de advocacia com atuação em direito civil, trabalhista, família e sucessões, empresarial, tributário, consumidor e previdenciário.">
+<meta name="theme-color" content="#0B1B33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="shell">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-  <aside class="side">
-    <a class="brand" href="#inicio"><span data-brand>Nogueira Prado</span><small>Advogados</small></a>
-    <nav aria-label="Principal" id="nav">
-      <a href="#areas">Áreas de atuação</a>
-      <a href="#equipe">Equipe</a>
-      <a href="#conversa">Primeira conversa</a>
-      <a href="#contato">Contato</a>
+<header class="top" id="topo">
+  <div class="wrap top-in">
+    <a class="brand" href="#inicio" aria-label="Almeida Duarte Advogados, início">
+      <svg class="mono" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+        <rect x="1" y="1" width="54" height="54" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M1 44h54" stroke="var(--ocre)" stroke-width="1.2"/>
+        <text x="28" y="34" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="25" font-weight="600" fill="currentColor" letter-spacing="-1">AD</text>
+        <path d="M20 50h16" stroke="var(--ocre)" stroke-width="2"/>
+      </svg>
+      <span class="brand-t"><b data-brand>Almeida Duarte</b><small>Advogados</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#escritorio"><i>01</i>Escritório</a>
+      <a href="#areas"><i>02</i>Áreas de atuação</a>
+      <a href="#profissionais"><i>03</i>Profissionais</a>
+      <a href="#publicacoes"><i>04</i>Publicações</a>
+      <a href="#contato"><i>05</i>Contato</a>
     </nav>
-    <div class="side-contact">
-      <a class="btn btn-side" data-wa="Olá! Gostaria de agendar uma conversa inicial." href="https://wa.me/5500900000000">Falar pelo WhatsApp</a>
-      <p>Segunda a sexta, das 9h às 18h</p>
+    <div class="tools">
+      <button class="icon-btn" id="abrir-busca" type="button" aria-label="Buscar no site" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
     </div>
-  </aside>
+  </div>
+</header>
 
-  <main class="main" id="inicio">
-    <section class="intro">
-      <h1>Atendimento jurídico com linguagem clara e acompanhamento do início ao fim</h1>
-      <p>Escritório com atuação em família e sucessões, trabalho, consumo, previdência e empresas. Você conta o caso em poucas linhas, marcamos uma conversa e explicamos os caminhos possíveis, os prazos e os honorários antes de qualquer contrato.</p>
-      <div class="actions">
-        <a class="btn" href="#conta">Contar o meu caso</a>
-        <a class="btn btn-ghost" href="#areas">Ver áreas de atuação</a>
-      </div>
-    </section>
+<dialog id="busca" aria-labelledby="busca-t">
+  <form method="dialog" class="busca-form" id="busca-form">
+    <div class="busca-head">
+      <h2 id="busca-t">Buscar no site</h2>
+      <button class="icon-btn" value="x" aria-label="Fechar busca">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+    <label class="sr" for="busca-q">Termo de busca</label>
+    <input id="busca-q" type="search" placeholder="Ex.: inventário, contrato, rescisão" autocomplete="off">
+    <ul id="busca-res" class="busca-res" aria-live="polite"></ul>
+  </form>
+</dialog>
 
-    <section id="areas" class="sec">
-      <h2>Áreas de atuação</h2>
-      <div class="acc">
-        <details open>
-          <summary>Família e sucessões</summary>
-          <p>Questões que envolvem a família e o patrimônio, tratadas com cuidado e, sempre que possível, por acordo.</p>
-          <ul><li>Divórcio e dissolução de união estável</li><li>Guarda, convivência e pensão alimentícia</li><li>Inventário, partilha e testamento</li></ul>
-        </details>
-        <details>
-          <summary>Trabalhista</summary>
-          <p>Orientação sobre direitos e obrigações na relação de trabalho, para empregados e para empregadores.</p>
-          <ul><li>Verbas rescisórias e horas extras</li><li>Reconhecimento de vínculo de emprego</li><li>Acidente de trabalho e estabilidade</li></ul>
-        </details>
-        <details>
-          <summary>Consumidor</summary>
-          <p>Defesa em problemas com compras, serviços, bancos e empresas de telefonia, internet e seguros.</p>
-          <ul><li>Cobranças indevidas e negativação do nome</li><li>Produto ou serviço com defeito</li><li>Contratos bancários e de financiamento</li></ul>
-        </details>
-        <details>
-          <summary>Previdenciário</summary>
-          <p>Análise do seu histórico de contribuições e acompanhamento dos pedidos junto ao INSS.</p>
-          <ul><li>Aposentadorias e pensão por morte</li><li>Benefícios por incapacidade</li><li>Revisão de benefícios negados ou concedidos</li></ul>
-        </details>
-        <details>
-          <summary>Empresarial e contratos</summary>
-          <p>Apoio jurídico para pequenos negócios, da abertura da empresa à cobrança de clientes.</p>
-          <ul><li>Contratos e termos de uso</li><li>Cobrança e renegociação de dívidas</li><li>Orientação na abertura e no dia a dia da empresa</li></ul>
-        </details>
-      </div>
-    </section>
+<main id="conteudo">
 
-    <section id="equipe" class="sec">
-      <h2>Equipe</h2>
-      <div class="team">
-        <article>
-          <h3>Marina Nogueira</h3>
-          <p class="oab">OAB/SP 000.000</p>
-          <p>Sócia fundadora. Atua em direito de família e sucessões e conduz os atendimentos iniciais do escritório.</p>
-        </article>
-        <article>
-          <h3>Eduardo Prado</h3>
-          <p class="oab">OAB/SP 000.000</p>
-          <p>Sócio. Atua em direito do trabalho, consumidor e empresarial, com foco em acordos e prevenção de conflitos.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="conversa" class="sec">
-      <h2>Como é a primeira conversa</h2>
-      <ol class="steps">
-        <li><h3>Você conta o caso</h3><p>Pelo formulário abaixo ou pelo WhatsApp, em poucas linhas. Não precisa enviar documentos agora.</p></li>
-        <li><h3>Marcamos a conversa</h3><p>Retornamos em até um dia útil para combinar o atendimento, presencial ou por videochamada.</p></li>
-        <li><h3>Explicamos os caminhos</h3><p>Você sai sabendo as opções, os prazos e os honorários, por escrito, para decidir com calma.</p></li>
-      </ol>
-    </section>
-
-    <section id="conta" class="sec">
-      <h2>Conte o seu caso</h2>
-      <form id="form" novalidate>
-        <label>Seu nome
-          <input name="nome" autocomplete="name" required>
-        </label>
-        <label>Assunto
-          <select name="area">
-            <option>Família e sucessões</option><option>Trabalhista</option><option>Consumidor</option>
-            <option>Previdenciário</option><option>Empresarial e contratos</option><option>Outro assunto</option>
-          </select>
-        </label>
-        <label>Resumo, em poucas linhas
-          <textarea name="resumo" rows="4" maxlength="400" placeholder="O que aconteceu e o que você precisa resolver"></textarea>
-        </label>
-        <label>Melhor período para retorno
-          <select name="periodo"><option>manhã</option><option>tarde</option><option>fim da tarde</option></select>
-        </label>
-        <button class="btn" type="submit">Enviar pelo WhatsApp</button>
-        <p class="error" id="err" role="alert" hidden>Digite o seu nome para continuar.</p>
-        <p class="small">Não envie documentos nem dados sensíveis por aqui. Eles ficam para a conversa inicial.</p>
-      </form>
-    </section>
-
-    <section id="contato" class="sec">
-      <h2>Contato</h2>
-      <div class="contact">
-        <div>
-          <h3>Endereço</h3>
-          <p>Rua XV de Novembro, 300, conjunto 41<br>Centro, Sua Cidade</p>
-          <p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Rua+XV+de+Novembro+300" target="_blank" rel="noopener">Abrir no Google Maps</a></p>
-        </div>
-        <div>
-          <h3>Atendimento</h3>
-          <p>Segunda a sexta, das 9h às 18h, com hora marcada.</p>
-          <p><a class="link" data-wa="Olá! Tenho uma dúvida." data-phone href="https://wa.me/5500900000000">(00) 90000-0000</a></p>
+  <section class="hero" id="inicio">
+    <div class="wrap grid hero-grid">
+      <div class="hero-txt">
+        <p class="eyebrow">Escritório de advocacia · Sorocaba, SP</p>
+        <h1>Rigor técnico a serviço de <em>decisões</em> que pedem prudência.</h1>
+        <p class="lead">Atuamos de forma consultiva e contenciosa, com equipe multidisciplinar, linguagem clara e atenção a cada etapa do processo.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contato">Primeiro contato</a>
+          <a class="link-arrow" href="#areas">Conheça as áreas de atuação <span aria-hidden="true">→</span></a>
         </div>
       </div>
-    </section>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 480 560" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8963E" stop-opacity=".9"/><stop offset="1" stop-color="#C8963E" stop-opacity="0"/></linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16305A"/><stop offset="1" stop-color="#0B1B33"/></linearGradient>
+          </defs>
+          <rect width="480" height="560" fill="url(#g2)"/>
+          <g stroke="#C8963E" stroke-opacity=".28" fill="none">
+            <path d="M0 80h480M0 160h480M0 240h480M0 320h480M0 400h480M0 480h480"/>
+          </g>
+          <g fill="url(#g1)" opacity=".55">
+            <rect x="60" y="120" width="42" height="440"/><rect x="140" y="120" width="42" height="440"/>
+            <rect x="220" y="120" width="42" height="440"/><rect x="300" y="120" width="42" height="440"/><rect x="380" y="120" width="42" height="440"/>
+          </g>
+          <g fill="none" stroke="#C8963E" stroke-width="1.2">
+            <path d="M40 120h400M40 104h400M60 88h360"/>
+            <path d="M60 88 240 20 420 88"/>
+            <path d="M60 120v440M102 120v440M140 120v440M182 120v440M220 120v440M262 120v440M300 120v440M342 120v440M380 120v440M422 120v440" stroke-opacity=".5"/>
+            <circle cx="240" cy="62" r="14"/>
+          </g>
+          <path d="M0 520h480" stroke="#C8963E" stroke-width="2"/>
+          <rect x="0" y="520" width="480" height="40" fill="#08142A"/>
+          <path d="M360 0 L480 0 L480 90 Z" fill="#9C3A2B" opacity=".9"/>
+        </svg>
+        <p class="hero-cap">Tradição, método e continuidade.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer class="foot">
-      <p><span data-brand>Nogueira Prado</span> Advogados. Conteúdo meramente informativo, em conformidade com o Provimento 205/2021 do Conselho Federal da OAB. Este site não promete resultados.</p>
-      <p>Site de demonstração com conteúdo de exemplo.</p>
-    </footer>
-  </main>
-</div>
+  <section class="nums" aria-labelledby="nums-t">
+    <div class="wrap">
+      <h2 class="sr" id="nums-t">O escritório em números</h2>
+      <ul class="nums-l">
+        <li><b>7</b><span>áreas de atuação</span></li>
+        <li><b>12</b><span>profissionais</span></li>
+        <li><b>2</b><span>unidades</span></li>
+        <li><b>20+</b><span>anos de atuação</span></li>
+      </ul>
+      <p class="note">Números de exemplo, editáveis. Substituir por dados reais do escritório antes da publicação.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="escritorio" aria-labelledby="esc-t">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <span class="num">01</span>
+        <h2 id="esc-t">O escritório</h2>
+      </div>
+      <div class="sec-body">
+        <p class="big">Um escritório de médio porte, organizado como as grandes bancas: equipes por especialidade, revisão técnica entre pares e comunicação direta com o cliente.</p>
+        <div class="cols">
+          <p>O Almeida Duarte Advogados reúne profissionais com formação complementar e experiência em diferentes ramos do direito. A atuação combina prevenção, consultoria e representação, sempre dentro dos limites éticos da profissão.</p>
+          <p>Acreditamos que o bom trabalho jurídico começa pela escuta, passa por uma análise cuidadosa dos fatos e dos documentos e termina com informação clara sobre os caminhos possíveis, inclusive os riscos.</p>
+        </div>
+        <ul class="valores">
+          <li><h3>Rigor</h3><p>Pesquisa de legislação e jurisprudência, revisão por segundo advogado e registro de cada etapa.</p></li>
+          <li><h3>Clareza</h3><p>Explicamos prazos, custos e riscos em linguagem acessível, sem promessa de resultado.</p></li>
+          <li><h3>Sigilo</h3><p>Dever profissional de confidencialidade e cuidado com dados pessoais, conforme a LGPD.</p></li>
+          <li><h3>Continuidade</h3><p>Um profissional responsável acompanha o caso e mantém o cliente informado.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="areas" aria-labelledby="areas-t">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <span class="num">02</span>
+        <h2 id="areas-t">Áreas de atuação</h2>
+        <p class="sec-sub">Selecione uma área para ver os temas atendidos.</p>
+      </div>
+      <div class="sec-body">
+        <ol class="acc" id="acc">
+          <li data-search="Civil contratos responsabilidade civil posse propriedade cobrança">
+            <h3><button type="button" aria-expanded="false" aria-controls="p1" id="b1"><i>01</i><span>Civil</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p1" role="region" aria-labelledby="b1"><div><p>Assessoria em relações privadas, da elaboração de contratos à solução de conflitos.</p><ul><li>Contratos e distratos</li><li>Responsabilidade civil</li><li>Direitos reais, posse e propriedade</li><li>Locação e condomínio</li><li>Cobrança e execução</li></ul></div></div>
+          </li>
+          <li data-search="Trabalhista empregador empregado reclamação rescisão compliance trabalhista">
+            <h3><button type="button" aria-expanded="false" aria-controls="p2" id="b2"><i>02</i><span>Trabalhista</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p2" role="region" aria-labelledby="b2"><div><p>Atuação consultiva e contenciosa, para empregadores e para trabalhadores.</p><ul><li>Contratos de trabalho e rotinas de conformidade</li><li>Reclamações trabalhistas</li><li>Verbas rescisórias</li><li>Acordos e negociações coletivas</li></ul></div></div>
+          </li>
+          <li data-search="Família e sucessões divórcio guarda pensão inventário testamento planejamento sucessório">
+            <h3><button type="button" aria-expanded="false" aria-controls="p3" id="b3"><i>03</i><span>Família e sucessões</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p3" role="region" aria-labelledby="b3"><div><p>Atendimento reservado em temas sensíveis, com foco em soluções consensuais sempre que possível.</p><ul><li>Divórcio e união estável</li><li>Guarda, convivência e alimentos</li><li>Inventário e partilha</li><li>Testamento e planejamento sucessório</li></ul></div></div>
+          </li>
+          <li data-search="Empresarial societário contratos empresariais recuperação holding">
+            <h3><button type="button" aria-expanded="false" aria-controls="p4" id="b4"><i>04</i><span>Empresarial</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p4" role="region" aria-labelledby="b4"><div><p>Suporte jurídico contínuo a empresas de pequeno e médio porte e a empresas familiares.</p><ul><li>Constituição e alterações societárias</li><li>Acordos de sócios</li><li>Contratos comerciais</li><li>Prevenção e solução de litígios empresariais</li></ul></div></div>
+          </li>
+          <li data-search="Tributário impostos planejamento tributário defesa fiscal execução fiscal">
+            <h3><button type="button" aria-expanded="false" aria-controls="p5" id="b5"><i>05</i><span>Tributário</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p5" role="region" aria-labelledby="b5"><div><p>Orientação sobre obrigações fiscais e defesa em procedimentos administrativos e judiciais.</p><ul><li>Consultoria tributária</li><li>Defesa em autuações fiscais</li><li>Execução fiscal</li><li>Revisão de enquadramento</li></ul></div></div>
+          </li>
+          <li data-search="Consumidor relações de consumo bancos seguros planos de saúde">
+            <h3><button type="button" aria-expanded="false" aria-controls="p6" id="b6"><i>06</i><span>Consumidor</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p6" role="region" aria-labelledby="b6"><div><p>Orientação em conflitos de consumo, com tentativa de solução extrajudicial antes da via judicial.</p><ul><li>Contratos bancários e de seguros</li><li>Planos de saúde</li><li>Vícios de produtos e serviços</li><li>Cobranças indevidas</li></ul></div></div>
+          </li>
+          <li data-search="Previdenciário INSS aposentadoria benefício revisão">
+            <h3><button type="button" aria-expanded="false" aria-controls="p7" id="b7"><i>07</i><span>Previdenciário</span><svg class="pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="panel" id="p7" role="region" aria-labelledby="b7"><div><p>Análise de tempo de contribuição e de requisitos para benefícios, com explicação das regras vigentes.</p><ul><li>Aposentadorias</li><li>Benefícios por incapacidade</li><li>Pensão por morte</li><li>Recursos administrativos</li></ul></div></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="profissionais" aria-labelledby="pro-t">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <span class="num">03</span>
+        <h2 id="pro-t">Profissionais</h2>
+        <p class="sec-sub">Nomes e números de inscrição fictícios, para ilustração.</p>
+      </div>
+      <div class="sec-body">
+        <ul class="team">
+          <li data-search="Helena Almeida sócia fundadora civil família sucessões">
+            <svg class="sil" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#12284A"/><circle cx="60" cy="46" r="20" fill="none" stroke="#C8963E" stroke-width="1.2"/><path d="M20 120c0-26 18-40 40-40s40 14 40 40" fill="none" stroke="#C8963E" stroke-width="1.2"/><text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="18" fill="#C8963E">HA</text></svg>
+            <h3>Helena Almeida</h3><p class="role">Sócia fundadora</p><p>Família e sucessões · Civil</p><p class="oab">OAB/SP 000.000</p>
+          </li>
+          <li data-search="Ricardo Duarte sócio empresarial tributário">
+            <svg class="sil" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#12284A"/><circle cx="60" cy="46" r="20" fill="none" stroke="#C8963E" stroke-width="1.2"/><path d="M20 120c0-26 18-40 40-40s40 14 40 40" fill="none" stroke="#C8963E" stroke-width="1.2"/><text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="18" fill="#C8963E">RD</text></svg>
+            <h3>Ricardo Duarte</h3><p class="role">Sócio</p><p>Empresarial · Tributário</p><p class="oab">OAB/SP 000.000</p>
+          </li>
+          <li data-search="Marina Vasconcelos sócia trabalhista">
+            <svg class="sil" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#12284A"/><circle cx="60" cy="46" r="20" fill="none" stroke="#C8963E" stroke-width="1.2"/><path d="M20 120c0-26 18-40 40-40s40 14 40 40" fill="none" stroke="#C8963E" stroke-width="1.2"/><text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="18" fill="#C8963E">MV</text></svg>
+            <h3>Marina Vasconcelos</h3><p class="role">Sócia</p><p>Trabalhista</p><p class="oab">OAB/SP 000.000</p>
+          </li>
+          <li data-search="Eduardo Caetano advogado consumidor previdenciário">
+            <svg class="sil" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" fill="#12284A"/><circle cx="60" cy="46" r="20" fill="none" stroke="#C8963E" stroke-width="1.2"/><path d="M20 120c0-26 18-40 40-40s40 14 40 40" fill="none" stroke="#C8963E" stroke-width="1.2"/><text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="18" fill="#C8963E">EC</text></svg>
+            <h3>Eduardo Caetano</h3><p class="role">Advogado sênior</p><p>Consumidor · Previdenciário</p><p class="oab">OAB/SP 000.000</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="publicacoes" aria-labelledby="pub-t">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <span class="num">04</span>
+        <h2 id="pub-t">Publicações</h2>
+        <p class="sec-sub">Conteúdo informativo, sem caráter de consulta individual.</p>
+      </div>
+      <div class="sec-body">
+        <ul class="pubs">
+          <li data-search="Inventário extrajudicial cartório quando é possível">
+            <p class="tag">Família e sucessões</p>
+            <h3><a href="#publicacoes" aria-label="Inventário extrajudicial: quando é possível (exemplo)">Inventário extrajudicial: quando é possível</a></h3>
+            <p>Os requisitos legais para fazer o inventário em cartório e as situações em que a via judicial continua necessária.</p>
+            <p class="meta">Leitura de 4 min · Exemplo</p>
+          </li>
+          <li data-search="Contrato de trabalho registro jornada boas práticas empregador">
+            <p class="tag">Trabalhista</p>
+            <h3><a href="#publicacoes" aria-label="Rotinas de registro de jornada (exemplo)">Rotinas de registro de jornada: pontos de atenção</a></h3>
+            <p>Uma visão geral das exigências sobre controle de jornada e dos cuidados documentais mais comuns nas empresas.</p>
+            <p class="meta">Leitura de 5 min · Exemplo</p>
+          </li>
+          <li data-search="Cláusulas contratuais revisão contrato empresarial inadimplemento">
+            <p class="tag">Empresarial</p>
+            <h3><a href="#publicacoes" aria-label="Cláusulas essenciais em contratos empresariais (exemplo)">Cláusulas essenciais em contratos empresariais</a></h3>
+            <p>Objeto, prazo, penalidades e foro: o que revisar antes de assinar um contrato entre empresas.</p>
+            <p class="meta">Leitura de 4 min · Exemplo</p>
+          </li>
+        </ul>
+        <p class="note">Títulos e resumos de exemplo. Substituir por textos próprios, revisados pelo advogado responsável.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contato" aria-labelledby="ct-t">
+    <div class="wrap grid">
+      <div class="sec-head">
+        <span class="num">05</span>
+        <h2 id="ct-t">Contato</h2>
+        <p class="sec-sub">Como funciona o primeiro contato.</p>
+      </div>
+      <div class="sec-body">
+        <ol class="passos">
+          <li><i>1</i><div><h3>Mensagem inicial</h3><p>Pelo formulário ao lado ou pelo WhatsApp, descreva o assunto em poucas linhas.</p></div></li>
+          <li><i>2</i><div><h3>Triagem</h3><p>Nossa equipe identifica a área responsável e informa o horário disponível para conversa.</p></div></li>
+          <li><i>3</i><div><h3>Conversa inicial</h3><p>O advogado ouve o caso, explica os caminhos possíveis e apresenta as condições do atendimento.</p></div></li>
+        </ol>
+
+        <div class="contato-grid">
+          <form id="form" novalidate>
+            <h3>Fale com o escritório</h3>
+            <label>Seu nome
+              <input name="nome" autocomplete="name" required>
+            </label>
+            <label>Assunto
+              <select name="area">
+                <option>Civil</option><option>Trabalhista</option><option>Família e sucessões</option>
+                <option>Empresarial</option><option>Tributário</option><option>Consumidor</option>
+                <option>Previdenciário</option><option>Outro assunto</option>
+              </select>
+            </label>
+            <label>Resumo, em poucas linhas
+              <textarea name="resumo" rows="4" maxlength="400" placeholder="Descreva de forma breve o assunto"></textarea>
+            </label>
+            <label>Melhor período para retorno
+              <select name="periodo"><option>manhã</option><option>tarde</option><option>fim da tarde</option></select>
+            </label>
+            <p class="aviso"><b>Atenção:</b> não envie documentos, números de processos nem dados sensíveis por este formulário. Eles serão solicitados em canal adequado, após o atendimento inicial.</p>
+            <p class="error" id="err" role="alert" hidden>Digite o seu nome para continuar.</p>
+            <button class="btn" type="submit">Continuar pelo WhatsApp</button>
+          </form>
+
+          <div class="unidades">
+            <h3>Unidades</h3>
+            <article>
+              <h4>Sorocaba (sede)</h4>
+              <address>Av. Exemplo, 1000, sala 501<br>Centro, Sorocaba, SP, 18000-000</address>
+            </article>
+            <article>
+              <h4>Votorantim</h4>
+              <address>Rua Modelo, 200, conjunto 12<br>Centro, Votorantim, SP, 18110-000</address>
+            </article>
+            <p class="tel">Telefone e WhatsApp: <a data-wa="Olá! Gostaria de agendar uma conversa inicial." href="https://wa.me/5500900000000" data-phone>(00) 90000-0000</a></p>
+            <p class="hor">Segunda a sexta, das 9h às 18h</p>
+            <a class="btn btn-line" data-wa="Olá! Gostaria de agendar uma conversa inicial." href="https://wa.me/5500900000000">Falar pelo WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mono" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><rect x="1" y="1" width="54" height="54" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M1 44h54" stroke="var(--ocre)" stroke-width="1.2"/><text x="28" y="34" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="25" font-weight="600" fill="currentColor" letter-spacing="-1">AD</text><path d="M20 50h16" stroke="var(--ocre)" stroke-width="2"/></svg>
+        <span class="brand-t"><b data-brand>Almeida Duarte</b><small>Advogados</small></span>
+      </div>
+      <nav aria-label="Rodapé" class="foot-nav">
+        <a href="#escritorio">Escritório</a><a href="#areas">Áreas de atuação</a><a href="#profissionais">Profissionais</a><a href="#publicacoes">Publicações</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <p class="legal">Este site tem caráter exclusivamente informativo e está em conformidade com o Código de Ética e Disciplina da OAB e com o Provimento 205/2021 do Conselho Federal da OAB. Não há promessa de resultado, e o conteúdo não substitui consulta jurídica individual. Sociedade de advogados inscrita na OAB/SP sob o nº 00.000 (exemplo).</p>
+    <p class="demo">Site de demonstração. Marca, nomes, números e textos fictícios. Layout de inspiração institucional, sem relação com qualquer escritório existente.</p>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
